@@ -346,11 +346,7 @@ function Urna(props){
 
         props.setNum1Digit("")
         props.setNum2Digit("")
-
     }
-
-
-
 
     return <div className={styles.corpo}>
 

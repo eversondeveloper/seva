@@ -41,6 +41,21 @@ function SuperComputador(props){
         </div>
     }
 
+    useEffect(() => {
+        const acionaCorrupt = (event) => {
+            if (event.button === 1) {
+                setCorruption((prev) => !prev);
+            }
+        };
+    
+        window.addEventListener("mousedown", acionaCorrupt);
+    
+        return () => {
+            window.removeEventListener("mousedown", acionaCorrupt);
+        };
+    }, []);
+    
+
     
     let sonsCorruption = () => {
         let corruptionMoneySom = new Audio(corruptionMoney)
